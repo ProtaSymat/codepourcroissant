@@ -1,0 +1,390 @@
+/* ==================================== Layer 1: Settings ==================================== */
+:root{
+  --main-color: #efb990;
+  --secondary-color: #4f3b31;
+  --tertiary-color: #FFF0E2;
+  --white-color: #ffffff;
+  --black-color: #180901;
+  --dark-color: #rgb(0, 0, 0);
+  --font-family-primary: "Zen Kaku Gothic Antique", Helvetica, Arial, Lucida, sans-serif;
+  --font-family-secondary: "Reem Kufi", Helvetica, Arial, Lucida, sans-serif;
+  --font-weight-regular: 500;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  --padding-section: 64px;
+  --margin-section: 128px;
+  --font-size-small:14px;
+  --font-size-medium:16px;
+  --font-size-normal:18px;
+  --font-size-large:24px;
+  --font-size-extralarge:30px;
+  --font-size-big:36px;
+  --height:40px
+}
+/* ==================================== Layer 2: Tools ==================================== */
+.color-blanc{
+  color:var(--white-color);
+}
+.color-black{
+  color:var(--secondary-color);
+}
+.color-marron{
+  color:var(--tertiary-color);
+}
+.color-orange{
+  color:var(--main-color);
+}
+.spacer-l-0{
+  margin-left: 0.8em;
+}
+.spacer-l-1{
+  margin-left: 1em;
+}
+.spacer-t-3{
+  margin-top: 5em;
+}
+.spacer-t-2{
+  margin-top: 1.5em;
+}
+.spacer-b-0{
+  margin-bottom: 0.8em;
+}
+.spacer-b-2{
+  margin-bottom: 1.5em;
+}
+/* ==================================== Layer 3: Generic ==================================== */
+html, body, *, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  color: var(--dark-color);
+  line-height: 1;
+  font-family: Open Sans,Arial,sans-serif;
+  font-size: var(--font-size-medium);
+  background-color: var(--main-color);
+  font-weight: var(--font-weight-regular);
+  margin:0;
+  padding:0;
+}
+ul{
+  list-style: none;
+  padding:0;
+}
+hr{
+  border: solid 1px var(--black-color);
+}
+/* ==================================== Layer 4: Elements ==================================== */
+h1,h2,h3 {
+  font-family: var(--font-family-secondary);
+  padding-bottom: 10px;
+  line-height: 1.5em;
+  font-weight: var(--font-weight-medium);
+  margin: 0;
+  letter-spacing: 1px;
+}
+h1 {
+  font-size:var(--font-size-big);
+}
+h2 {
+  font-size:var(--font-size-extralarge);
+  color:var(--secondary-color);
+}
+h3 {
+  font-size:var(--font-size-medium);
+}
+.fs-24{
+  font-size: var(--font-size-large);
+}
+.fs-18{
+  font-size:var(--font-size-normal);
+}
+.fs-16{
+  font-size:var(--font-size-medium);
+ ;
+}
+.fs-14{
+  font-size:var(--font-size-small);
+ ;
+}
+#blanc{
+  background-color:var(--white-color);
+}
+#orange{
+  background-color:var(--main-color);
+}
+#marron{
+  background-color:var(--tertiary-color);
+}
+#black{
+  background-color:var(--black-color);
+}
+.button-primary{
+  font-family: var(--font-family-primary);
+  background-color: var(--secondary-color);
+  border-radius:50px;
+  color: var(--white-color);
+  line-height: 30px;
+  font-size: var(--font-size-normal);
+  height: 50px;
+  padding: 14px 24px 14px 34px;
+}
+.button-primary:hover{
+  background-color: black;
+  color: var(--white-color);
+}
+.button-secondary{
+  font-family: var(--font-family-primary);
+  background-color: transparent;
+  border-radius:50px;
+  border: solid 1px rgb(77, 74, 74);
+  color: var(--black-color);
+  line-height: 30px;
+  font-size: var(--font-size-normal);
+  height: 50px;
+  padding: 8px 18px 14px 18px;
+}
+.button-secondary:hover{
+  background-color: black;
+  color: var(--main-color);
+}
+a,a:hover {
+  text-decoration: none;
+  color:inherit;
+  font-family: inherit;
+}
+p {
+  font-weight: 400;
+  line-height: 1.8em;
+  font-family: var(--font-family-primary) 
+}
+.flex{
+  display: flex;
+}
+.container {
+  width: 60%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container-fluid {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  box-sizing: border-box;
+  width: 60%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.w-fit{
+  width: fit-content;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-1 {
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+}
+.col-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+.col-5 {
+  flex: 0 0 41.666667%;
+  max-width: 41.666667%;
+}
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.col-7 {
+  flex: 0 0 58.333333%;
+  max-width: 58.333333%;
+}
+.col-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+}
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+.col-11 {
+  flex: 0 0 91.666667%;
+  max-width: 91.666667%;
+}
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.justify-content-between {
+  justify-content: space-between !important;
+}
+.justify-content-around {
+  justify-content: space-around !important;
+}
+.align-items-start {
+  align-items: flex-start !important;
+}
+.align-items-end {
+  align-items: flex-end !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.align-items-baseline {
+  align-items: baseline !important;
+}
+.align-items-stretch {
+  align-items: stretch !important;
+}
+.align-content-start {
+  align-content: flex-start !important;
+}
+.align-content-end {
+  align-content: flex-end !important;
+}
+.align-content-center {
+  align-content: center !important;
+}
+.align-content-between {
+  align-content: space-between !important;
+}
+.align-content-around {
+  align-content: space-around !important;
+}
+.align-content-stretch {
+  align-content: stretch !important;
+}
+.align-self-start {
+  align-self: flex-start !important;
+}
+.align-self-end {
+  align-self: flex-end !important;
+}
+.align-self-center {
+  align-self: center !important;
+}
+.align-self-stretch {
+  align-self: stretch !important;
+}
+.between{
+  justify-content: space-between;
+}
+.medium{
+  font-weight: var(--font-weight-medium);
+}
+.bold{
+  font-weight: var(--font-weight-bold);
+}
+.p-0{
+  padding:0 !important;
+}
+.gap-4{
+  gap:4px;
+}
+.gap-64{
+  gap:64px;
+}
+.gap-28{
+  gap:28px;
+}
+.h-100{
+  height:100% 
+}
+.mg-section{
+  margin-top: var(--margin-section);
+  margin-bottom: var(--margin-section);
+}
+/* ==================================== Layer 5: Objects ==================================== */
+.section{
+  background-color:var(--main-color);
+  padding: var(--primary-padding);
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+}
+.card{
+  background-color: var(--white-color);
+  padding-bottom:32px;
+  padding-top:32px;
+  padding-left:16px;
+  padding-right:16px;
+  border-radius:15px;
+}
+.card-2{
+  background-color: var(--main-color);
+  padding-bottom:32px;
+  padding-top:32px;
+  padding-left:16px;
+  padding-right:16px;
+  border-radius:15px;
+}
+/* ==================================== Layer 6: Components ==================================== */
+.menu-item-header{
+  height: var(--height);
+}
+.menu-item-footer{
+  height: var(--height)
+}
+.menu-item-footer a, .menu-item-footer{
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  padding-top:12px;
+  padding-bottom:12px;
+}
+.menu-item-header a{
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+}
+.current-menu-item{
+  color: var(--secondary-color);
+}
+.header{
+  padding-top:28px;
+  background-color:var(--main-color);
+}
+nav .nav{
+  list-style: none;
+}
+/* ==================================== Layer 7: Trumps ==================================== */
+#mobile-menu:before {
+  content: url(https://philippe-aerts.com/wp-content/uploads/2023/09/menu.png.webp);
+}
+.arrow:after {
+  content: url(https://philippe-aerts.com/wp-content/uploads/2023/09/Arrow.png.webp);
+  position: relative;
+  top: 4px;
+  left: 6px;
+}
